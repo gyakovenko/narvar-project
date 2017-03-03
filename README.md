@@ -1,8 +1,6 @@
-#**Project Title**#
+#**Narvar Tracking Page**#
 
 ## Project Structure
-
-*Default Structure for A Project Template*
 
 **Java 7**
 
@@ -12,10 +10,9 @@
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+Quick project to test a Sephora Narvar shipping tracking page. 
+One test verifies that the delivery status in two sections displays matches and, if delivered, that the delivery dates match as well. 
 
 ---
-
-Java Project for SQA Boot Camp Program
 
 Galina Yakovenko <gyakovenko@gmail.com>

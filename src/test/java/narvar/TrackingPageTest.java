@@ -31,7 +31,7 @@ public class TrackingPageTest extends BasicTest {
 	public void testDeliveryStatusAndDatesMatch() {
 		TrackingPage trackingPage = new TrackingPage(getDriver());
 		// find values for all elements to be compared
-		getLogger().info("Getting values from site: ");
+		getLogger().info("GETTING VALUES FROM PAGE: ");
 		boolean eddStatusDelivered = trackingPage.checkEddStatus();
 		getLogger().info("eddStatusDelivered = " + eddStatusDelivered);
 
@@ -51,7 +51,7 @@ public class TrackingPageTest extends BasicTest {
 		getLogger().info("activityDescIsDelivered = " + activityDescIsDelivered);
 
 		// compare the values
-		getLogger().info("\nNow comparing the values: ");
+		getLogger().info("COMPARING THE VALUES: ");
 		boolean[] matches = compareStatusAndDates(eddStatusDelivered, activityStatusDelivered, activityDescIsDelivered,
 				eddMonthAbb, activityDate, eddDate);
 
@@ -70,13 +70,8 @@ public class TrackingPageTest extends BasicTest {
 		boolean[] matches = { false, false };
 		if (eddStatusDelivered == activityStatusDelivered && activityStatusDelivered == activityDescIsDelivered) {
 			matches[0] = true;
-			getLogger().info("Delivery status matches for all three fields");
+			getLogger().info("Delivery status matches for all three fields in 2 sections");
 			if (eddStatusDelivered == true) {
-				getLogger().info("eddMonthAbb  = \"" + eddMonthAbb + "\"");
-				getLogger().info("activityDate[0]  = \"" + activityDate[0] + "\"");
-				getLogger().info("eddDate  = \"" + eddDate + "\"");
-				getLogger().info("activityDate[1]  = \"" + activityDate[1] + "\"");
-
 				if (eddMonthAbb.equalsIgnoreCase(activityDate[0]) && eddDate.equalsIgnoreCase(activityDate[1])) {
 					matches[1] = true;
 					getLogger().info("Delivery date matches for 2 sections");
