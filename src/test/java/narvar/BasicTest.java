@@ -32,6 +32,7 @@ public class BasicTest {
 	 * Constructs instance of BasicTest and initiates logger
 	 *
 	 * @param baseUrl
+	 *            passed when creating instance for child class
 	 */
 	public BasicTest(String baseUrl) {
 		this.baseUrl = baseUrl;
@@ -47,10 +48,9 @@ public class BasicTest {
 	}
 
 	/**
-	 * sets up Chrome Driver before each test - when enabled
+	 * sets up Chrome Driver before each test - not currently enabled
 	 */
-	@BeforeMethod // (groups = "chrome")
-	(enabled = false)
+	@BeforeMethod(enabled = false)
 	public void setUpChrome() {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
@@ -59,10 +59,9 @@ public class BasicTest {
 	}
 
 	/**
-	 * sets up Firefox Driver before each test - when enabled
+	 * sets up Firefox Driver before each test
 	 */
-	@BeforeMethod // (groups = "firefox")
-	// (enabled = false)
+	@BeforeMethod // (enabled = false)
 	public void setUpFirefox() {
 		this.driver = new FirefoxDriver();
 		this.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -74,7 +73,7 @@ public class BasicTest {
 	 */
 	@AfterMethod
 	public void tearDown() {
-		getDriver().quit();
+		getDriver().close();
 	}
 
 	private String getBaseUrl() {
