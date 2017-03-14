@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Default suite">
+     <test verbose="2" name="FullyWorking">
+           <groups>
+                <run>
+                      <exclude name="notFullyWorking"></exclude>
+                </run>
+           </groups>
+           <packages>
+                <package name="narvar.*"></package>
+           </packages>
+     </test>
+</suite>

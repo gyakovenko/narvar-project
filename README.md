@@ -10,12 +10,14 @@
 
 ## Synopsis
 
-Quick project to test a Sephora Narvar shipping tracking page. 
-One test verifies that the delivery status in two sections displays matches and, if delivered, that the delivery dates match as well. 
+Project to test a Narvar shipping tracking page. 
 
-## Link to Video of Test Run
-
-https://drive.google.com/file/d/0By48mZJaZHQjQ0h2Qk1Fb0Vhdnc/view?usp=sharing
+Tests:
+	-Page title
+	-Shipping status
+	-Clickability of tracking number
+	-Ability to submit, update, and unsubscribe mobile number of notifications (positive and negative test cases)
+	-Ability to submit feedback with and without comments
 
 ---
 
